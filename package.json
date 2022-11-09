@@ -1,9 +1,9 @@
 {
-  "name": "webpack-boilerplate",
-  "version": "3.0.1",
-  "description": "Sensible webpack 5 boilerplate using Babel and PostCSS.",
+  "name": "dicoding-webpack-webcomponent-food",
+  "version": "0.0.1",
+  "description": "Food recipes with Webpack and WebComponent.",
   "main": "index.js",
-  "author": "Tania Rascia",
+  "author": "Afif Abdillah Jusuf",
   "license": "MIT",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
@@ -30,14 +30,22 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-webpack": "^0.13.1",
     "eslint-plugin-prettier": "^4.0.0",
+    "glob": "^8.0.3",
     "html-webpack-plugin": "^5.3.2",
+    "imagemin": "^8.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
+    "imagemin-webpack-plugin": "^2.4.2",
     "mini-css-extract-plugin": "^2.4.2",
-    "sass": "^1.43.5",
     "postcss-loader": "^6.2.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.4.1",
+    "sass": "^1.43.5",
     "sass-loader": "^12.2.0",
     "style-loader": "^3.3.0",
+    "terser-webpack-plugin": "^5.3.6",
     "webpack": "^5.58.2",
     "webpack-cli": "^4.9.0",
     "webpack-dev-server": "^4.3.1",
@@ -45,6 +53,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:taniarascia/webpack-boilerplate"
+    "url": "git@github.com:bungambohlah/dicoding-webpack-webcomponent-food.git"
   }
 }
