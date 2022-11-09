@@ -1,8 +1,26 @@
-# 📦 webpack Boilerplate
+# 🍚🍰 Simple Food Recipes
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Sensible webpack 5 boilerplate using Babel, PostCSS and Sass.
+Simple food recipes app that provide food recipes information from [TheMealDB](https://themealdb.com) using sensible webpack 5 boilerplate using Babel, PostCSS and Sass.
+
+## Table of Contents
+
+- [🍚🍰 Simple Food Recipes](#-simple-food-recipes)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Development server](#development-server)
+    - [Production build](#production-build)
+  - [Features](#features)
+  - [Dependencies](#dependencies)
+    - [webpack](#webpack)
+    - [Babel](#babel)
+    - [Loaders](#loaders)
+    - [Plugins](#plugins)
+    - [Linters](#linters)
+  - [Author](#author)
+  - [License](#license)
 
 ## Installation
 
@@ -20,7 +38,7 @@ npm i
 npm start
 ```
 
-You can view the development server at `localhost:8080`.
+You can view the development server at `localhost:3005`.
 
 ### Production build
 
@@ -46,6 +64,7 @@ cd dist && http-server
 - [Babel](https://babeljs.io/)
 - [Sass](https://sass-lang.com/)
 - [PostCSS](https://postcss.org/)
+- [TheMealDB](https://themealdb.com/)
 
 ## Dependencies
 
@@ -80,6 +99,8 @@ cd dist && http-server
 - [`html-webpack-plugin`](https://github.com/jantimon/html-webpack-plugin) - Generate HTML files from template
 - [`mini-css-extract-plugin`](https://github.com/webpack-contrib/mini-css-extract-plugin) - Extract CSS into separate files
 - [`css-minimizer-webpack-plugin`](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/) - Optimize and minimize CSS assets
+- [`terser-webpack-plugin`](https://www.npmjs.com/package/terser-webpack-plugin) - Minify/minimize Javascript
+- [`imagemin-webpack-plugin`](https://www.npmjs.com/package/imagemin-webpack-plugin) - Compress/minimize all images (jp(e)g, png, gif, and svg) files
 
 ### Linters
 
@@ -90,7 +111,17 @@ cd dist && http-server
 
 ## Author
 
-- [Tania Rascia](https://www.taniarascia.com)
+- [Afif Abdillah Jusuf](https://afif.dev)
+
+Hello there 👋🏻, my name is Afif Abdillah Jusuf and I'm a Full-Stack Developer.
+
+I'm currently working as a Software Engineer.
+
+Graduated from Politeknik Elektronika Negeri Surabaya as Associate Degree in Informatics Engineering.
+
+Nice to meet you.
+
+Visit my personal site at [afif.dev](https://afif.dev).
 
 ## License
 
