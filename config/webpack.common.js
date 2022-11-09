@@ -1,6 +1,8 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ImageminPlugin = require('imagemin-webpack-plugin').default
+const glob = require('glob')
 
 const paths = require('./paths')
 
@@ -20,6 +22,19 @@ module.exports = {
     // Removes/cleans build folders and unused assets when rebuilding
     new CleanWebpackPlugin(),
 
+    // Optimize images: reduce size of image from public folder
+    new ImageminPlugin({
+      pngquant: {
+        quality: '80',
+      },
+      externalImages: {
+        context: '.',
+        sources: glob.sync('public/**/*.{png,jpg,jpeg,svg,gif}'),
+        destination: '.',
+        fileName: '[path][name].[ext]',
+      },
+    }),
+
     // Copies files from target to destination folder
     new CopyWebpackPlugin({
       patterns: [
@@ -34,10 +49,18 @@ module.exports = {
       ],
     }),
 
+    // Optimize images: reduce size of image from imported images
+    new ImageminPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      pngquant: {
+        quality: '80',
+      },
+    }),
+
     // Generates an HTML file from a template
     // Generates deprecation warning: https://github.com/jantimon/html-webpack-plugin/issues/1501
     new HtmlWebpackPlugin({
-      title: 'webpack Boilerplate',
+      title: 'Simple Food Recipes',
       favicon: paths.src + '/images/favicon.png',
       template: paths.src + '/template.html', // template file
       filename: 'index.html', // output file
@@ -51,7 +74,7 @@ module.exports = {
       { test: /\.js$/, use: ['babel-loader'] },
 
       // Images: Copy image files to build folder
-      { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
+      { test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/i, type: 'asset/resource' },
 
       // Fonts and SVGs: Inline files
       { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: 'asset/inline' },
