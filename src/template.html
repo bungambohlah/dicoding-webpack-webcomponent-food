@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
-  <body>
-    <div id="root"></div>
-  </body>
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+</head>
+
+<body>
+  <div id="root">
+    <nav
+      class="tw-sticky tw-top-0 tw-z-10 tw-bg-gray-700 tw-backdrop-filter tw-backdrop-blur-lg tw-bg-opacity-90 tw-border-b tw-border-gray-600">
+      <div class="tw-w-full tw-mx-auto tw-px-4">
+        <div class="tw-flex tw-items-center tw-justify-between tw-h-16">
+          <span class="tw-text-2xl tw-text-slate-100 tw-font-semibold">Food Recipes</span>
+          <div class="tw-flex tw-space-x-6 tw-text-slate-200">
+            <a href="https://github.com/bungambohlah/dicoding-webpack-webcomponent-food">Github</a>
+            <a href="https://afif.dev" target="_blank noopener">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section id="searchBar">
+
+    </section>
+  </div>
+</body>
+
 </html>
