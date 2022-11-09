@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
+const MangleCssClassPlugin = require('mangle-css-class-webpack-plugin')
 const { merge } = require('webpack-merge')
 
 const paths = require('./paths')
@@ -39,6 +40,13 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({
       filename: 'styles/[name].[contenthash].css',
       chunkFilename: '[id].css',
+    }),
+    new MangleCssClassPlugin({
+      classNameRegExp:
+        '((hover|focus|active|disabled|visited|first|last|odd|even|group-hover|focus-within|xs|sm|md|lg|xl|firefox)[\\\\]*:)*tw-[a-zA-Z0-9_-]*([\\\\]*/[0-9]*)?',
+      ignorePrefixRegExp:
+        '((hover|focus|active|disabled|visited|first|last|odd|even|group-hover|focus-within|xs|sm|md|lg|xl|firefox)[\\\\]*:)*',
+      log: true,
     }),
   ],
   optimization: {
