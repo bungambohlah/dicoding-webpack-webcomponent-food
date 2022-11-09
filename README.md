@@ -101,12 +101,13 @@ cd dist && http-server
 - [`css-minimizer-webpack-plugin`](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/) - Optimize and minimize CSS assets
 - [`terser-webpack-plugin`](https://www.npmjs.com/package/terser-webpack-plugin) - Minify/minimize Javascript
 - [`imagemin-webpack-plugin`](https://www.npmjs.com/package/imagemin-webpack-plugin) - Compress/minimize all images (jp(e)g, png, gif, and svg) files
+- [`mangle-css-class-webpack-plugin`](https://www.npmjs.com/package/mangle-css-class-webpack-plugin) - Minimize and obfuscates the class name (include tailwindcss) in the production mode
 
 ### Linters
 
 - [`eslint`](https://github.com/eslint/eslint) - Enforce styleguide across application
 - [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) - Implement prettier rules
-  - - [`prettier`](https://github.com/prettier/prettier) - Dependency for `prettier-webpack-plugin` plugin
+    - - [`prettier`](https://github.com/prettier/prettier) - Dependency for `prettier-webpack-plugin` plugin
 - [`eslint-import-resolver-webpack`](https://github.com/benmosher/eslint-plugin-import/tree/master/resolvers/webpack) - Throw exceptions for import/export in webpack
 
 ## Author
