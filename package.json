@@ -14,7 +14,11 @@
   "keywords": [
     "webpack",
     "webpack 5",
-    "webpack boilerplate"
+    "food recipes",
+    "food",
+    "recipes",
+    "recipe",
+    "dicoding"
   ],
   "devDependencies": {
     "@babel/core": "^7.15.8",

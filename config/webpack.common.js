@@ -22,19 +22,6 @@ module.exports = {
     // Removes/cleans build folders and unused assets when rebuilding
     new CleanWebpackPlugin(),
 
-    // Optimize images: reduce size of image from public folder
-    new ImageminPlugin({
-      pngquant: {
-        quality: '80',
-      },
-      externalImages: {
-        context: '.',
-        sources: glob.sync('public/**/*.{png,jpg,jpeg,svg,gif}'),
-        destination: '.',
-        fileName: '[path][name].[ext]',
-      },
-    }),
-
     // Copies files from target to destination folder
     new CopyWebpackPlugin({
       patterns: [
