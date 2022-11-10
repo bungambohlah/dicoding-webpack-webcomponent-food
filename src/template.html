@@ -14,19 +14,42 @@
 <body>
   <div id="root">
     <nav
-      class="tw-sticky tw-top-0 tw-z-10 tw-bg-gray-700 tw-backdrop-filter tw-backdrop-blur-lg tw-bg-opacity-90 tw-border-b tw-border-gray-600">
+      class="tw-sticky tw-top-0 tw-z-10 tw-bg-violet-900 tw-backdrop-filter tw-backdrop-blur-lg tw-bg-opacity-90 tw-shadow-md tw-shadow-fuchsia-800">
       <div class="tw-w-full tw-mx-auto tw-px-4">
         <div class="tw-flex tw-items-center tw-justify-between tw-h-16">
           <span class="tw-text-2xl tw-text-slate-100 tw-font-semibold">Food Recipes</span>
           <div class="tw-flex tw-space-x-6 tw-text-slate-200">
-            <a href="https://github.com/bungambohlah/dicoding-webpack-webcomponent-food">Github</a>
-            <a href="https://afif.dev" target="_blank noopener">Contact</a>
+            <a href="https://github.com/bungambohlah/dicoding-webpack-webcomponent-food"
+              target="_blank noreferrer noopener">Github</a>
+            <a href="https://afif.dev" target="_blank noreferrer noopener">Contact</a>
           </div>
         </div>
       </div>
     </nav>
-    <section id="searchBar">
-
+    <section id="searchBar" class="tw-m-6 tw-mx-12">
+      <div class="tw-flex">
+        <label for="search-dropdown"
+          class="tw-mb-2 tw-text-sm tw-font-medium tw-sr-only tw-text-gray-300">Search</label>
+        <div class="tw-relative tw-w-full tw-max-w-lg tw-m-auto">
+          <input type="search" id="search-dropdown"
+            class="border-gray-300 tw-block tw-h-14 tw-p-4 tw-w-full tw-z-20 tw-text-sm tw-rounded-lg tw-border tw-bg-gray-700 tw-outline-none tw-border-gray-600 tw-placeholder-gray-400 tw-text-white focus-visible:tw-border-violet-500"
+            placeholder="Search some recipes here" required>
+          <button type="submit" title="submit"
+            class="tw-absolute tw-h-14 tw-top-0 tw-right-0 tw-p-2.5 tw-text-sm tw-font-medium tw-text-white tw-rounded-r-lg tw-border tw-border-violet-700 focus-visible:tw-ring-4 focus-visible:tw-outline-none tw-bg-violet-600 hover:tw-bg-violet-700 focus-visible:tw-ring-violet-800"><svg
+              aria-hidden="true" class="tw-w-5 tw-h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg></button>
+        </div>
+      </div>
+    </section>
+    <section id="foodCategories" class="tw-m-6 tw-px-12 tw-mx-auto">
+      <div class="categoriesSwiper swiper tw-w-full tw-p-6">
+        <div class="swiper-wrapper"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
     </section>
   </div>
 </body>
