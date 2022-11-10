@@ -43,9 +43,9 @@ module.exports = merge(common, {
     }),
     new MangleCssClassPlugin({
       classNameRegExp:
-        '((hover|focus|active|disabled|visited|first|last|odd|even|group-hover|focus-within|xs|sm|md|lg|xl|firefox)[\\\\]*:)*tw-[a-zA-Z0-9_-]*([\\\\]*/[0-9]*)?',
+        '((hover|focus|active|disabled|visited|first|last|odd|even|group-hover|focus-within|focus-visible|xs|sm|md|lg|xl|firefox)[\\\\]*:)*tw-[a-zA-Z0-9_-]*([\\\\]*/[0-9]*)?',
       ignorePrefixRegExp:
-        '((hover|focus|active|disabled|visited|first|last|odd|even|group-hover|focus-within|xs|sm|md|lg|xl|firefox)[\\\\]*:)*',
+        '((hover|focus|active|disabled|visited|first|last|odd|even|group-hover|focus-within|focus-visible|xs|sm|md|lg|xl|firefox)[\\\\]*:)*',
       log: true,
     }),
   ],

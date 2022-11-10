@@ -2,7 +2,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ImageminPlugin = require('imagemin-webpack-plugin').default
-const glob = require('glob')
 
 const paths = require('./paths')
 
