@@ -1,4 +1,8 @@
 import '@/styles/categoryCard.scss'
+import { getRecipesByCategory } from '@/api/recipes'
+
+// import web components
+import '@/elements/recipe-card'
 
 class CategoryCard extends HTMLElement {
   // first, observe the attributes
@@ -20,7 +24,6 @@ class CategoryCard extends HTMLElement {
     let data = null
     if (!this.hasAttribute('selected')) this.setAttribute('selected', null)
     if (this.hasAttribute('category')) data = JSON.parse(this.category)
-    if (!this.hasAttribute('selected')) this.setAttribute('selected', null)
 
     if (!data) {
       this.innerHTML = ``
@@ -46,7 +49,35 @@ class CategoryCard extends HTMLElement {
         categoryCards[i].setAttribute('selected', 'false')
       }
 
-      if (this.selected === 'true') this.classList.add('category-selected')
+      if (this.selected === 'true') {
+        this.classList.add('category-selected')
+
+        let data = null
+        if (this.hasAttribute('category')) data = JSON.parse(this.category)
+        // get food recipes by selected category
+        if (data && data.strCategory) {
+          const foodRecipes = document.querySelector('#foodRecipes .tw-grid')
+          foodRecipes.innerHTML = ``
+
+          getRecipesByCategory(data.strCategory)
+            .then((listRecipes) => {
+              if (!listRecipes) foodRecipes.textContent = 'No data found'
+
+              if (listRecipes && listRecipes.length) {
+                for (let idxRcpCard = 0; idxRcpCard < listRecipes.length; idxRcpCard++) {
+                  const listRecipe = listRecipes[idxRcpCard]
+                  const recipeCard = document.createElement('recipe-card')
+                  recipeCard.setAttribute('recipe', JSON.stringify(listRecipe))
+                  recipeCard.setAttribute('category', data.strCategory)
+                  foodRecipes.appendChild(recipeCard)
+                }
+              }
+            })
+            .catch(() => {
+              foodRecipes.textContent = 'Error...'
+            })
+        }
+      }
     }
   }
 
