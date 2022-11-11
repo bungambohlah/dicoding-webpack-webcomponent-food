@@ -19,6 +19,7 @@ Simple food recipes app that provide food recipes information from [TheMealDB](h
     - [Loaders](#loaders)
     - [Plugins](#plugins)
     - [Linters](#linters)
+  - [Link](#link)
   - [Author](#author)
   - [License](#license)
 
@@ -109,6 +110,10 @@ cd dist && http-server
 - [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) - Implement prettier rules
     - - [`prettier`](https://github.com/prettier/prettier) - Dependency for `prettier-webpack-plugin` plugin
 - [`eslint-import-resolver-webpack`](https://github.com/benmosher/eslint-plugin-import/tree/master/resolvers/webpack) - Throw exceptions for import/export in webpack
+
+## Link
+
+Visit at [foodrecipes.afif.dev](https://foodrecipes.afif.dev)
 
 ## Author
 
