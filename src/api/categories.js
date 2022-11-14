@@ -7,7 +7,7 @@ async function getListCategories() {
     if (categoryFetch.data && categoryFetch.data.categories) return categoryFetch.data.categories
     return null
   } catch (error) {
-    console.error('got error from API', error)
+    // console.error('got error from API', error)
     alert('Something error, please reload')
     return Promise.reject(error)
   }

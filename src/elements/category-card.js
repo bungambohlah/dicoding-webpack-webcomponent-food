@@ -41,7 +41,7 @@ class CategoryCard extends HTMLElement {
     }
   }
   disconnectedCallback() {}
-  attributeChangedCallback(attrName, oldVal, newVal) {
+  attributeChangedCallback() {
     if (this.selected) {
       const categoryCards = document.querySelectorAll('.category-selected')
       for (let i = 0; i < categoryCards.length; ++i) {

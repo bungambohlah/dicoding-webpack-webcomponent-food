@@ -40,7 +40,7 @@ class RecipeCard extends HTMLElement {
     }
   }
   disconnectedCallback() {}
-  attributeChangedCallback(attrName, oldVal, newVal) {}
+  attributeChangedCallback() {}
 
   /**
    * @param {String} recipe

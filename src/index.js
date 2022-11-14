@@ -16,7 +16,7 @@ import '@/elements/category-card'
 import { getListCategories } from '@/api/categories'
 
 // init Swiper:
-const swiper = new Swiper('.categoriesSwiper', {
+new Swiper('.categoriesSwiper', {
   slidesPerView: 7,
   spaceBetween: 16,
   breakpoints: {

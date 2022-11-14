@@ -9,7 +9,7 @@ async function getRecipesByCategory(category = 'Seafood') {
     if (mealFetch.data && mealFetch.data.meals) return mealFetch.data.meals
     return null
   } catch (error) {
-    console.error('got error from API', error)
+    // console.error('got error from API', error)
     alert('Something error, please reload')
     return Promise.reject(error)
   }
